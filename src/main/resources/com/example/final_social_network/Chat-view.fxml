@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.ChatController">
+   <children>
+      <SplitPane dividerPositions="0.13168449197860962" orientation="VERTICAL" prefHeight="750.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: green;">
+              <children>
+                  <HBox alignment="CENTER" prefHeight="69.0" prefWidth="740.0" spacing="160.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/the_perfect_green.png');" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                          <Label prefHeight="82.0" prefWidth="424.0" text="Chats">
+                              <font>
+                                  <Font name="Tamil MN" size="67.0" />
+                              </font>
+                          </Label>
+                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNewMessage" prefHeight="102.0" prefWidth="80.0" style="-fx-shape: circle;">
+                        <graphic>
+                                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                      <image>
+                                          <Image url="@../../../imagini/writeANewMessage.png" />
+                                      </image>
+                                  </ImageView>
+                        </graphic>
+                          </Button>
+                      </children>
+                      <opaqueInsets>
+                          <Insets />
+                      </opaqueInsets>
+                      <padding>
+                          <Insets left="50.0" right="50.0" />
+                      </padding>
+                  </HBox>
+              </children>
+          </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+              <children>
+                  <SplitPane dividerPositions="0.26961678832116787" layoutX="299.0" layoutY="110.0" prefHeight="646.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <items>
+                          <ListView fx:id="usersListView" prefHeight="644.0" prefWidth="292.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/the_perfect_green.png');" />
+                          <SplitPane dividerPositions="0.842391304347826" orientation="VERTICAL" prefHeight="644.0" prefWidth="797.0">
+                              <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                      <children>
+                                          <GridPane layoutX="40.0" layoutY="280.0" prefHeight="539.0" prefWidth="797.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                              <columnConstraints>
+                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                                  <RowConstraints maxHeight="266.0" minHeight="40.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                                                  <RowConstraints maxHeight="480.0" minHeight="10.0" prefHeight="480.0" vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <ListView fx:id="messagesListView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                                                    <Label fx:id="friendNameLabel" prefHeight="40.0" prefWidth="582.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/croco_color.png');" />
+                                              </children>
+                                          </GridPane>
+                                      </children>
+                                  </AnchorPane>
+                                  <HBox alignment="CENTER" prefHeight="98.0" prefWidth="797.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/the_perfect_green.png');">
+                                      <children>
+                                          <TextField fx:id="newMessageTextField" prefHeight="53.0" prefWidth="658.0" style="-fx-background-radius: 50;">
+                                              <opaqueInsets>
+                                                  <Insets left="20.0" />
+                                              </opaqueInsets>
+                                              <padding>
+                                                  <Insets left="20.0" />
+                                              </padding>
+                                          </TextField>
+                                          <Button fx:id="sendButton" mnemonicParsing="false" onAction="#sendHandler" prefHeight="41.0" prefWidth="87.0" style="-fx-shape: circle;">
+                                              <graphic>
+                                                  <ImageView fitHeight="56.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                                                      <image>
+                                                          <Image url="@../../../imagini/send_message_button.png" />
+                                                      </image>
+                                                  </ImageView>
+                                              </graphic>
+                                          </Button>
+                                 <Button fx:id="replyButton" mnemonicParsing="false" onAction="#replyHandler" prefHeight="41.0" prefWidth="87.0" style="-fx-shape: circle;">
+                                     <graphic>
+                                         <ImageView fitHeight="53.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../../imagini/reply_button.png" />
+                                          </image>
+                                       </ImageView>
+                                    </graphic>
+                                 </Button>
+                                      </children>
+                                      <opaqueInsets>
+                                          <Insets left="20.0" />
+                                      </opaqueInsets>
+                                  </HBox>
+                              </items>
+                          </SplitPane>
+                      </items>
+                  </SplitPane>
+              </children>
+          </AnchorPane>
+      </SplitPane>
+   </children>
+</AnchorPane>

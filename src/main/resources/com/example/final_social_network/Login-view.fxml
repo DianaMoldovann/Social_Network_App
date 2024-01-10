@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="1100.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/mini_croco_logo.png'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.LoginController">
+   <VBox alignment="CENTER" layoutX="329.0" layoutY="211.0" prefHeight="325.0" prefWidth="550.0" spacing="20" style="-fx-border-color: black; -fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/croco_color.png');">
+      <children>
+          <GridPane alignment="CENTER" prefHeight="118.0" prefWidth="281.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="109.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="172.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+              <children>
+                <Label text="email" />
+                <Label text="password" GridPane.rowIndex="1" />
+                <PasswordField fx:id="textFieldPassword" promptText="yourPassword" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="textFieldEmail" promptText="yourEmail@icloud.com" GridPane.columnIndex="1" />
+              </children>
+          </GridPane>
+          <Button mnemonicParsing="false" onAction="#handleLogin" prefHeight="40.0" prefWidth="110.0" style="-fx-background-radius: 100;" text="Login" />
+      </children>
+   </VBox>
+</AnchorPane>

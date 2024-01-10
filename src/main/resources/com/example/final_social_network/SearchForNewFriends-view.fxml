@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/the_perfect_green.png');" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.SearchForNewFriendsController">
+   <children>
+      <VBox prefHeight="750.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <TextField fx:id="searchTextField" prefHeight="61.0" prefWidth="513.0" promptText="Search..." style="-fx-border-radius: 100; -fx-background-radius: 100; -fx-border-color: black; -fx-border-width: 1.8; -fx-padding: 13;">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#handleSearchButton" prefHeight="57.0" prefWidth="130.0" style="-fx-background-radius: 100;" text="Search">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="searchTableView" editable="true" prefHeight="480.0" style="-fx-border-color: black; -fx-padding: 10; -fx-border-width: 1.8; -fx-border-radius: 10; -fx-background-radius: 10;" AnchorPane.leftAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="firstNameColumnSearch" prefWidth="75.0" text="First Name" />
+                <TableColumn fx:id="lastNameColumnSearch" prefWidth="75.0" text="Last Name" />
+                  <TableColumn fx:id="emailColumnSearch" prefWidth="75.0" text="Email" />
+              </columns>
+               <opaqueInsets>
+                  <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+               </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSendRequest" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 100;" text="Send Request">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets left="30.0" />
+         </opaqueInsets></VBox>
+   </children>
+</AnchorPane>

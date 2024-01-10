@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/mini_croco_logo.png'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.SignInController">
+    <VBox alignment="CENTER" layoutX="402.0" layoutY="269.0" prefHeight="325.0" prefWidth="550.0" spacing="20" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/croco_color.png'); -fx-border-color: black;">
+        <children>
+          <GridPane alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="115.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="170.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="47.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="80.0" text="first name" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label text="last name" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label text="email" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label text="password" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <TextField fx:id="textFieldFirstName" alignment="CENTER" promptText="your first name" GridPane.columnIndex="1" />
+                  <TextField fx:id="textFieldLastName" alignment="CENTER" promptText="your last name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="textFieldEmail" alignment="CENTER" promptText="your email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <PasswordField fx:id="textFieldPassword" alignment="CENTER" promptText="your password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              </children>
+              <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+              </padding>
+          </GridPane>
+          <Button mnemonicParsing="false" onAction="#handleSignIn" prefHeight="40.0" prefWidth="110.0" style="-fx-background-radius: 100;" text="Sign in" />
+        </children>
+    </VBox>
+</AnchorPane>

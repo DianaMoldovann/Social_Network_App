@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane fx:id="tabPane" prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.SocialNetworkController">
+   <tabs>
+      <Tab text="Croco Chat">
+         <content>
+         <AnchorPane style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/Croco_logo.png');-fx-background-size: cover;">
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="642.0" prefWidth="999.0" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleLogin" prefHeight="40.0" prefWidth="103.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/croco_color.png');" text="Login" textAlignment="CENTER" textFill="#0f0f0f" textOverrun="LEADING_WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSignIN" prefHeight="40.0" prefWidth="103.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/croco_color.png');" text="Sign in" textFill="#0f0f0f" textOverrun="LEADING_WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" right="50.0" />
+               </padding>
+            </VBox>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

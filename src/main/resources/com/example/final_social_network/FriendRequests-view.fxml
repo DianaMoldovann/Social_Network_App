@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.FriendRequestController">
+   <SplitPane dividerPositions="0.785427807486631" prefHeight="550.0" prefWidth="750.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/the_perfect_green.png'); -fx-background-size: 95%;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+                 <VBox alignment="CENTER" prefHeight="268.0" prefWidth="284.0" spacing="20.0">
+                     <children>
+                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="82.0" prefWidth="574.0" text="Friend Requests">
+                  <font>
+                     <Font name="DIN Condensed Bold" size="41.0" />
+                  </font></Label>
+                         <TableView fx:id="requestsTableView" prefHeight="374.0" prefWidth="584.0">
+                             <columns>
+                                 <TableColumn fx:id="firstNameColumnRequest" prefWidth="75.0" text="First Name" />
+                                 <TableColumn fx:id="lastNameColumnRequest" prefWidth="75.0" text="Last Name" />
+                                 <TableColumn fx:id="dateColumnRequest" prefWidth="75.0" text="date of request" />
+                             </columns>
+                             <columnResizePolicy>
+                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                             </columnResizePolicy>
+                         </TableView>
+                         <HBox alignment="CENTER" prefHeight="46.0" prefWidth="284.0" spacing="50.0">
+                             <children>
+                                 <Button mnemonicParsing="false" onAction="#handleAcceptFriendRequest" prefHeight="80.0" prefWidth="80.0" style="-fx-shape: circle;">
+                        <graphic>
+                           <ImageView fitHeight="80.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../imagini/accept_button.png" />
+                              </image>
+                           </ImageView>
+                        </graphic></Button>
+                                 <Button mnemonicParsing="false" onAction="#handleDeclineFriendRequest" prefHeight="80.0" prefWidth="80.0" style="-fx-shape: circle;">
+                        <graphic>
+                           <ImageView fitHeight="80.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../imagini/refuse_button.png" />
+                              </image>
+                           </ImageView>
+                        </graphic></Button>
+                             </children>
+                         </HBox>
+                     </children>
+                 </VBox>
+         <AnchorPane prefHeight="548.0" prefWidth="173.0">
+            <children>
+                         <Button alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleAddNewFriend" prefHeight="60.0" prefWidth="60.0" style="-fx-shape: circle;">
+                  <graphic>
+                     <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../imagini/plus_button.png" />
+                        </image>
+                     </ImageView>
+                  </graphic></Button>
+            </children>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></AnchorPane>
+      </items>
+   </SplitPane>
+  </AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/mini_croco_logo.png'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.SettingsController">
+    <VBox alignment="CENTER" layoutX="166.0" layoutY="140.0" prefHeight="308.0" prefWidth="419.0" spacing="20" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/croco_color.png'); -fx-border-color: black;">
+        <GridPane alignment="CENTER" prefHeight="142.0" prefWidth="287.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="115.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="170.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="47.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <padding>
+                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+            </padding>
+            <Label prefHeight="35.0" prefWidth="80.0" text="first name" textAlignment="CENTER" />
+            <Label text="last name" GridPane.rowIndex="1" />
+            <Label text="password" GridPane.rowIndex="2" />
+            <TextField fx:id="textFieldFirstName" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+            <TextField fx:id="textFieldLastName" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="textFieldPassword" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        </GridPane>
+        <Button mnemonicParsing="false" onAction="#handleUpdate" prefHeight="40.0" prefWidth="110.0" style="-fx-background-radius: 100;" text="Update Account" />
+      <Button mnemonicParsing="false" onAction="#handleDelete" prefHeight="40.0" prefWidth="110.0" style="-fx-background-radius: 100;" text="Delete Account" />
+    </VBox>
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="318.0" layoutY="63.0" text="Settings">
+      <font>
+         <Font name="DIN Condensed Bold" size="46.0" />
+      </font></Label>
+</AnchorPane>

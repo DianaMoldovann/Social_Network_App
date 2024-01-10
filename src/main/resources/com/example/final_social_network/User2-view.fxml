@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane fx:id="userTabPane" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.User2Controller">
+    <Tab>
+        <AnchorPane prefHeight="550.0" prefWidth="750.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/the_perfect_green.png'); -fx-background-size: 100%;">
+                 <ImageView fitHeight="98.0" fitWidth="184.0" layoutX="-12.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                         <Image url="@../../../imagini/Croco_logo.png" />
+                     </image>
+                 </ImageView>
+            <SplitPane dividerPositions="0.4992937853107345" layoutX="104.0" layoutY="34.0" prefHeight="550.0" prefWidth="804.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+            <AnchorPane style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/croco_color.png');">
+               <children>
+                      <GridPane alignment="CENTER" prefHeight="498.0" prefWidth="360.0" style="-fx-background-image: green; -fx-border-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="132.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="135.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="291.0" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="291.0" minHeight="0.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="317.0" minHeight="10.0" prefHeight="221.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                          <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" text="First Name" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                                </Label>
+                                <Label prefHeight="23.0" prefWidth="138.0" text="Last Name" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label text="Email" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <TextField fx:id="textFieldFirstName" editable="false" style="-fx-background-color: silver; -fx-background-radius: 100; -fx-border-color: black; -fx-border-radius: 100;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                                <TextField fx:id="textFieldLastName" editable="false" style="-fx-background-color: silver; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                                <TextField fx:id="textFieldEmail" editable="false" style="-fx-background-color: silver; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                                <Label prefHeight="34.0" prefWidth="120.0" text="Your account:">
+                                    <font>
+                                        <Font name="DIN Condensed Bold" size="23.0" />
+                                    </font>
+                                </Label>
+                              <Button mnemonicParsing="false" onAction="#handleLogOut" prefHeight="53.0" prefWidth="58.0" style="-fx-shape: circle; -fx-border-color: black;" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                                  <GridPane.margin>
+                                      <Insets bottom="20.0" />
+                                  </GridPane.margin>
+                           <graphic>
+                              <ImageView accessibleRole="DATE_PICKER" fitHeight="51.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../imagini/log_out_button.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow height="18.05" radius="7.6975" spread="0.07" width="14.74" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                              </Button>
+                        <ImageView fitHeight="99.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../../../imagini/user_icon.png" />
+                           </image>
+                        </ImageView>
+                          </children>
+                          <opaqueInsets>
+                              <Insets left="10.0" top="10.0" />
+                          </opaqueInsets>
+                          <padding>
+                              <Insets left="10.0" top="10.0" />
+                          </padding>
+                      </GridPane>
+               </children>
+            </AnchorPane>
+                <AnchorPane style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/croco_color.png'); -fx-border-color: black;">
+               <children>
+                  <GridPane layoutX="74.0" layoutY="141.0" prefHeight="498.0" prefWidth="405.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="123.0" minHeight="50.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="135.0" minHeight="0.0" prefHeight="134.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="202.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#handlerFriendships" prefHeight="80.0" prefWidth="80.0" style="-fx-shape: circle;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../imagini/friends_button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button mnemonicParsing="false" onAction="#handlerFriendRequest" prefHeight="80.0" prefWidth="80.0" style="-fx-shape: circle;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="91.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../imagini/friend_request_button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button mnemonicParsing="false" onAction="#handleChat" style="-fx-shape: circle;" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../imagini/messages_button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleSettings" prefHeight="80.0" prefWidth="80.0" style="-fx-shape: circle;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../imagini/settings_button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label text="Menu:" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="DIN Condensed Bold" size="28.0" />
+                           </font>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+            </SplitPane>
+        </AnchorPane>
+    </Tab>
+</TabPane>

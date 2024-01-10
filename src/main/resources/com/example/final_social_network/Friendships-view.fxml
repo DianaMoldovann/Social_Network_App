@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/Croco_logo.png'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_social_network.Controller.FriendshipsController">
+      <SplitPane dividerPositions="0.8536096256684492" layoutX="104.0" layoutY="34.0" prefHeight="550.0" prefWidth="750.0" style="-fx-background-image: url('file:/Users/dianamoldovan/Java/Lab7-10_MAP_final_social_network/src/main/resources/imagini/the_perfect_green.png'); -fx-background-size: cover;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox alignment="CENTER" spacing="12.0">
+                <children>
+                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="104.0" prefWidth="635.0" text="Your Friends">
+                        <font>
+                            <Font name="DIN Condensed Bold" size="39.0" />
+                        </font>
+                    </Label>
+                    <TableView fx:id="friednsTableView" prefHeight="371.0" prefWidth="577.0">
+                        <columns>
+                            <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First Name" />
+                            <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last Name" />
+                            <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email " />
+                            <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date of Friendship" />
+                        </columns>
+                        <columnResizePolicy>
+                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                        </columnResizePolicy>
+                    </TableView>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="635.0" spacing="15.0">
+                        <children>
+                            <Spinner fx:id="spinnerNrOfElements" editable="true" initialValue="5" max="10" min="1" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="60.0" />
+                  <Region prefHeight="100.0" prefWidth="79.0" />
+                            <Button fx:id="prevButton" mnemonicParsing="false" onAction="#prevHandler" prefHeight="45.0" prefWidth="50.0" style="-fx-shape: circle;">
+                                <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../../../imagini/previous_button.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Label fx:id="currentPageLabel" prefHeight="35.0" prefWidth="71.0" text="0 of 0">
+                                <font>
+                                    <Font name="Arial Hebrew" size="26.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextHandler" style="-fx-shape: circle;">
+                                <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../../../imagini/next_button.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                  <Region prefHeight="100.0" prefWidth="133.0" />
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+      <VBox alignment="BOTTOM_CENTER" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAddNewFriends" style="-fx-shape: circle;">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagini/plus_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDeleteFriend" prefHeight="80.0" prefWidth="80.0" style="-fx-shape: circle;" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="76.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagini/delete_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                      </Button>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="40.0" />
+         </opaqueInsets>
+      </VBox>
+      </SplitPane>
+  </AnchorPane>
